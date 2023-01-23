@@ -1,0 +1,85 @@
+<div class="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8">
+
+  <div class="sm:mx-auto sm:w-full sm:max-w-md">
+    <img class="mx-auto h-12 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">
+    <h2 class="mt-6 text-center text-3xl font-bold tracking-tight text-gray-900">Register for Rently</h2>
+  </div>
+
+
+  <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-md" aria-live="polite">
+    <div class="bg-white py-8 px-4 shadow sm:rounded-lg sm:px-10">
+      <form [formGroup]="signInForm" (ngSubmit)="createUser()" class="space-y-6">
+        <div>
+          <label
+            class="block text-sm font-medium text-gray-700"
+            for="email"
+          >
+            Email
+          </label>
+          <input
+            id="email"
+            formControlName="email"
+            class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+            type="email"
+            placeholder="Your email"
+            required
+          />
+        </div>
+        <div>
+          <label
+            class="block text-sm font-medium text-gray-700"
+            for="name_last"
+          >
+            Nachname
+          </label>
+          <input
+            id="name_last"
+            formControlName="name_last"
+            class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+            type="text"
+            placeholder="Dein Nachname"
+            required
+          />
+        </div>
+        <div>
+          <label
+            class="block text-sm font-medium text-gray-700"
+            for="name_first"
+          >
+            Vorname
+          </label>
+          <input
+            id="name_first"
+            formControlName="name_first"
+            class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+            type="text"
+            placeholder="Dein Vorname"
+            required
+          />
+        </div>
+        <div>
+          <label
+          class="block text-sm font-medium text-gray-700"
+          for="password">Password</label>
+          <input
+            id="password"
+            formControlName="password"
+            class="block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+            type="password"
+            placeholder="Your password"
+            required
+          />
+        </div>
+        <button  class="bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+          Register
+        </button>
+
+
+      </form>
+
+    </div>
+    <button routerLink="/login" class="mt-6 bg-blue-500 w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+      Back to login
+    </button>
+  </div>
+</div>
